@@ -47,7 +47,7 @@
 <script src="//cdn.staticfile.org/jquery/1.9.1/jquery.min.js"></script>
 <script>
 $.getJSON("/data.json", function (c) {
-	$.each(c, function (i, a) {
+	$.each(c.seo, function (i, a) {
 		$('.list').append('<div class="laofox jKJSbm fJMsxI"><a href="'+ a.url +'" target="_blank" height="auto" class="acs content"><p class="sc-hKgILt kkVeT rsIfq">'+ a.text +'</p></a></div>')
 	})
 });
