@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Push Sofe</title>
+  <style>
+  body{-webkit-box-sizing:border-box;box-sizing:border-box;font:400 20px/1.5 Source Sans Pro,Open Sans,Roboto,San Francisco,Helvetica,Arial,sans-serif;color:#333;background-color:#fff}
+h2{font-weight:400}
+a,a:active,a:link{color:#43853d;text-decoration:none;border-radius:2px}
+a:hover{color:#fff;background-color:#43853d}
+body{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;min-height:100vh;margin:0}
+.container{width:100%;max-width:980px;margin:0 auto;overflow:hidden}
+#home-intro{max-width:735px;margin:0 auto;padding:30px 0;text-align:center}
+#home-intro h2{margin-bottom:0}
+.home-downloadblock{display:inline-block;margin:0 8px}
+.home-downloadbutton{display:block;margin:10px 4px;padding:.2em .6em;background-color:#026e00;color:#fff!important;border-radius:2px;font-size:30px;font-weight:400;-webkit-transition:background-color .2s ease-in-out;transition:background-color .2s ease-in-out}
+.home-downloadbutton:hover{background-color:#43853d}
+.home-downloadbutton small{display:block;font-size:1rem}
+html{scroll-behavior:smooth}
+body{font-family:Microsoft Yahei,Source Sans Pro,Open Sans,Roboto,San Francisco,Helvetica,Arial,sans-serif!important}
+  </style>
+</head>
+<body>
+  
+    <div class="container">
+      <div id="home-intro">
+        <p>承接谷歌必应seo优化推广，快速收录排名霸屏首页。不限语言不限国家都可以定做谷歌必应SEO优化！</p>
+		<h2 id="home-downloadhead">Windows 软件下载</h2>
+      </div>
+    </div>
+</body>
+<script src="//cdn.staticfile.org/jquery/1.9.1/jquery.min.js"></script>
+<script>
+$.getJSON("/data.json", function (c) {
+	$.each(c.down, function (i, a) {
+		$('#home-downloadhead').after('<div class="home-downloadblock"><a href="'+a.href+'" class="home-downloadbutton">'+a.title+'<small>'+a.small+'</small></a></div>')
+	})
+});
+</script>
+</html>
